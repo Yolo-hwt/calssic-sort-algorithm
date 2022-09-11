@@ -1,7 +1,9 @@
 /**
+ * 顾名思义，冒泡，相邻元素两两比较，每次遍历冒泡出一个元素
+ * 这里做了一点优化
+ * 如果在一次冒泡中没有元素的交换，即后续未排序列表已经有序了，则isSorted为true，退出循环
  * 
- * @param {Boolean} option 
- * true: ascending  false: descending
+ * @param {Boolean} option true: ascending  false: descending
  * @param {Array,Number,String} nums 
  * @returns {Array} 
  */

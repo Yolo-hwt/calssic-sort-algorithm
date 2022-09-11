@@ -1,6 +1,7 @@
 
 
 /**
+ * 每次选择满足要求（最小/最大）的一项和当前指定位置项交换，直到列表尾部，全部有序
  * 
  * @param {Array} nums 
  * @param {Boolean} option 

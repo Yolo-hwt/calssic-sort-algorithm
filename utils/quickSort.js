@@ -1,5 +1,9 @@
 
 /**
+ * 以升序排列为例，快速排序就是每次找到一个轴点，小于它的交换到它左边，大于它的自然在右边
+ * **在递归的过程中从局部有序直到全部有序**
+ * 每次 **partition** 操作找到右边界元素合法位置，使右边界元素有序
+ * 然后对左右两边进行快速排序，递归直到 **low<=high** 触发边界条件，达到局部有序，递归完全结束后所有局部构成全局有序
  * 以右边界为轴整理并返回整理后右边界有序位置
  * @param {Array} nums 
  * @param {Number} left 
@@ -8,7 +12,7 @@
  */
 const partition = function (nums = [], left = 0, right = 0, option = true) {
     let index = left;
-    for (i = left; i < right; i++) {
+    for (let i = left; i < right; i++) {
         if (option) {
             if (nums[i] < nums[right]) {
                 [nums[index], nums[i]] = [nums[i], nums[index]];
