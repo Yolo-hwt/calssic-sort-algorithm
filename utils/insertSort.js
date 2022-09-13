@@ -8,7 +8,7 @@ const insertSort = function (nums = [], option = true) {
     if (nums.length <= 1) {
         return nums;
     }
-    for (let i = 0; i < nums.length; i++) {
+    for (let i = 1; i < nums.length; i++) {
         //前置指针
         let preIndex = i - 1;
         //当前排序元素
